@@ -9,9 +9,13 @@ export class CreatePlayerServiceModel
     @IsEmail()@IsNotEmpty()
     email : string
 
-    constructor(playerName : string , email : string)
+    @IsNotEmpty()
+    age : number
+
+    constructor(playerName : string , email : string, age : number)
     {
         this.playerName = playerName;
         this.email = email;
+        this.age = age;
     }
 }

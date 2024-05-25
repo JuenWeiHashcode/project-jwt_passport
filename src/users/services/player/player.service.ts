@@ -9,11 +9,13 @@ export class PlayerService {
     private fakeUsers : CreatePlayerDataModel[] = [{
         uid : 1,
         name : "OMO",
-        email : "tachibanaSan@gmail.com"
+        email : "tachibanaSan@gmail.com",
+        age : 34
     },{
         uid : 2,
         name : "Blade",
-        email : "kenzaki@gmail.com"
+        email : "kenzaki@gmail.com",
+        age : 25
     }]
 
 
@@ -24,7 +26,7 @@ export class PlayerService {
 
     createPlayer(newPlayerData : CreatePlayerServiceModel)
     {
-        this.fakeUsers.push(new CreatePlayerDataModel(randomInt(100), newPlayerData.playerName , newPlayerData.email))
+        this.fakeUsers.push(new CreatePlayerDataModel(randomInt(100), newPlayerData.playerName , newPlayerData.email, newPlayerData.age))
         return "Sucessfully ADDED"
     }
 
